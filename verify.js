@@ -145,6 +145,7 @@ const sendVerifyRequest = async (artifact, options) => {
   const encodedConstructorArgs = await fetchConstructorValues(artifact, options)
   const mergedSource = await fetchMergedSource(artifact, options)
   const contractProxyAddress = await getProxyAddress(artifact.contractName)
+  console.log(`Contract Proxy address ${contractProxyAddress}`)
 
 
   var postQueries = {
@@ -217,8 +218,8 @@ const checkVerificationStatus = async (address, options) => {
 
     try {
       const result = await axios.get(url)
-      if (result.data.result[0].SourceCode.length > 0) {
-        console.debug(`Contract at ${address} already verified`)
+      if ('SourceCode' in result.data.result[0] && result.data.result[0].SourceCode.length > 0) {
+        console.debug(`Contract at ${address} verified`)
         return  VerificationStatus.ALREADY_VERIFIED
       }
     } catch (e) {
@@ -234,6 +235,7 @@ const checkVerificationStatus = async (address, options) => {
 
 const getProxyAddress = async (contractName) => {
   try {
+    console.log(`Contract Name: ${contractName}`)
     return await kit.registry.addressFor(contractName)
   } catch (e) {
     return false

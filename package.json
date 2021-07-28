@@ -28,7 +28,7 @@
     "chai": "^4.2.0",
     "delay": "^4.3.0",
     "querystring": "^0.2.0",
-    "sol-merger": "^1.0.1"
+    "sol-merger": "^1.2.2"
   },
   "devDependencies": {
     "eslint": "^6.1.0",

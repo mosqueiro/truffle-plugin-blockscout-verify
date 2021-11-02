@@ -1,8 +1,8 @@
 {
   "name": "truffle-plugin-blockscout-verify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Verify your deployed smart contracts on Blockscout from the Truffle CLI",
-  "repository": "https://github.com/aaitor/truffle-plugin-blockscout-verify",
+  "repository": "https://github.com/mosqueiro/truffle-plugin-blockscout-verify",
   "main": "verify.js",
   "files": [
     "constants.js",

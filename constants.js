@@ -1,12 +1,12 @@
 const API_URLS = {
   1: 'https://blockscout.com/eth/mainnet/',
-  // 1101: 'https://integration-blockscout.celo-testnet.org/api'
+  3331: 'https://testnet.zcore.cash/',
   1101: 'http://localhost:4000/api'
 }
 
 const BLOCKSCOUT_URLS = {
   1: 'https://blockscout.com/eth/mainnet/',
-  // 1101: 'https://integration-blockscout.celo-testnet.org'
+  3331: 'https://testnet.zcore.cash/',
   1101: 'http://localhost:4000'
 }
 
